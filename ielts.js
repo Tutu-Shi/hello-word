@@ -112,7 +112,7 @@
 	function test_setting(){
 		$.ajax({
 			cache: false,
-			url: base_url+'querySeat?productType=' + product,
+			url: base_url+'index#!/querySeat?productType=' + product,
 			type: 'GET',
 			dataType: 'html',
 			error: function(request) {
@@ -120,7 +120,7 @@
 			},
 			success: function(data) {
 				var page = $(data);
-				page.find("#provinces").find("input[name='mvfSiteProvinces']").each(function() {
+				page.find("#centerProvinceCity").find("input-large").each(function() {
 					var el = $(this);
 					var city_value = trim(el.val());
 					var city_name = trim(el.parent().text());
